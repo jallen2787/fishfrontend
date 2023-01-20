@@ -1,44 +1,44 @@
 import api from "./apiConfig.js";
 
-export const getCharacters = async () => {
+export const getFishes = async () => {
   try {
-    const response = await api.get("/characters");
+    const response = await api.get("/");
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const getCharacter = async (id) => {
+export const getFish = async (id) => {
   try {
-    const response = await api.get(`/characters/${id}`);
+    const response = await api.get(`/${id}`);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const createCharacter = async (characterData) => {
+export const createFish = async (fishData) => {
   try {
-    const response = await api.post("/characters", characterData);
+    const response = await api.post("/", fishData);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const updateCharacter = async (id, characterData) => {
+export const updateFish = async (id, fishData) => {
   try {
-    const response = await api.put(`/characters/${id}`, characterData);
+    const response = await api.put(`/${id}`, fishData);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const deleteCharacter = async (id) => {
+export const deleteFish = async (id) => {
   try {
-    const response = await api.delete(`/characters/${id}`);
+    const response = await api.delete(`/${id}`);
     return response.data;
   } catch (error) {
     throw error;
